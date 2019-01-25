@@ -9,7 +9,7 @@ let number1=0,
            number2=0,
            number3=0;
 let id1='+';
-let number4;
+
 
 // console.log(rows);
 
@@ -120,7 +120,7 @@ case '/':      number1=parseInt(display.value,10);
               break;
 
  case '=':  number2=parseInt(display.value,10);
-           
+             console.log(number2);
               
             
              result(number1,number2,id1);
@@ -137,33 +137,41 @@ case '/':      number1=parseInt(display.value,10);
 
  function result(num1,num2,id)
 { console.log("hii");
-  let  flag='hi';
+  //let  flag='hi';
    switch(id)
    {
  
   case '+':// number2=display.value;
             number3=num1 + num2; 
-            //console.log();
-            checknumber(number3);
-            //display.value= number3;
+            console.log(number3);
+            //leng=number3.length;
+
+            //console.log(leng);
+            //checknumber(leng,number3);
+            display.value= number3;
             
            break;
   case '-': //number2=display.value;
             number3=num1 - num2; 
-            //display.value= number3;
-            checknumber(number3);    
+            //console.log(number3);
+            //leng=number3.length;
+            display.value= number3;
+           // checknumber(leng,number3);    
            break;
 
   case '*': //number2=display.value;
             number3=num1 * num2;
-            checknumber(number3); 
-            //display.value= number3;   
+            //console.log(number3);
+            //leng=number3.length;
+          //    checknumber(leng,number3); 
+            display.value= number3;   
            break;
 
  case '/':  //number2=display.value;
             number3=num1 / num2;
-            checknumber(number3); 
-           // display.value = number3;    
+           // checknumber(leng,number3);
+            //leng=number3.length; 
+            display.value = number3;    
              break;
 
 
@@ -175,39 +183,105 @@ case '/':      number1=parseInt(display.value,10);
  
 
 
-function checknumber(number4)
-{
-  let leng = 0;
-  leng=number4.length;
-  console.log(leng);
-  if(leng > 10)
-  {
+// function checknumber(leng,number3)
+// {
+// // //   let leng = 0;
+// //   leng=parseInt(number3.length,10);
+//    console.log(leng);
+//   if(leng < 10)
+//   {
+//     display.value = number3;
+  
+// }
+  
+//  else
+
+//  {
+//     return (alert("number greater than 10 digit"));
     
-    return (alert("number greater than 10 digit"));
-}
-  
- else
 
- {
-  
-    display.value = number4;
-
-}
-}
+// }
+// }
   function clearscreen()
   {
+   number1=display.value;
+   let token=0;
+   token=number1.length;
+  // console.log(token);
 
 
+   number2=number1.substring(0,token-1);
 
+    display.value=number2;
+    
+    // number2=display.value;
+    // if(number2 === ' ')
+    // {
+    //     display.value = '0';
+    //     return 0;
+    // }
 
 
 
   }
 
+function clearscreenAll()
+{
+
+    number1=display.value;
+    let token=0;
+    token=number1.length;
+   // console.log(token);
+ 
+ 
+    number2=number1.substring(0,0);
+ 
+     display.value=number2;
+
+}
+
+
+function singleInput(id)
+{
+
+ number2=display.value;
+
+ if(number2==='0')
+ {
+
+    return(alert("no input added"));
+
+ }
+
+  switch(id)
+{
+  case 'square': number1=parseInt(display.value,10);
+               console.log(number1);
+               number2=number1 * number1;
+               console.log(number2);
+            display.value=number2;
+            break;
+    
+  case 'cube': number1=parseInt(display.value,10);
+             number2=number1 * number1 * number1;
+             console.log(number2);
+            display.value = number2;
+            break;
+  
+//   case %:   number1=parseInt(display.value,10);
+//              break;  
+             
+             
 
 
 
 
+
+
+
+}
+
+}
 
 
 
