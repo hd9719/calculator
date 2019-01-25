@@ -1,0 +1,1 @@
+document.body.style.backgroundImage = "url('images/giphy.gif')";
