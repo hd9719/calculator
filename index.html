@@ -29,47 +29,47 @@
    <div id='text' class='textfield'>
     
    
-   <input type='textArea' id='t1' readonly maxlength="10">
+   <input type='text' id='t1' name="result" readonly  max="10" >
    
    </div>
 
 <!-- using bootstrap classes for same row sized button -->
 
 <div class="row">
-    <button class="col-sm-3"  id="clearall" type="button"> ! </button>
-    <button class="col-sm-3"  id="clear" type="button"> √ </button>
-    <button class="col-sm-3"  id="%" type="button">  x^2     </button>
-    <button class="col-sm-3"  id="/" type="button">  x^3  </button>
+    <button class="col-sm-3"  id="clearall" type="button" onclick='clearscreen()'>AC </button>
+    <button class="col-sm-3"  id="clear" type="button"onclick='clearscreen()'> CE</button>
+    <button class="col-sm-3"  id="square" type="button" onclick='myfunction(this.id)'>  x^2     </button>
+    <button class="col-sm-3"  id="cube" type="button" onclick='myfunction(this.id)'>  x^3  </button>
   </div>
  <div class="row">
-        <button class="col-sm-3"  id="clearall" type="button">AC</button>
-        <button class="col-sm-3"  id="clear" type="button"> -->  </button>
-        <button class="col-sm-3"  id="%" type="button">        % </button>
-        <button class="col-sm-3"  id="/" type="button">        ÷  </button>
+        <button class="col-sm-3"  id="fact" type="button" onclick='myfunction(this.id)'>!</button>
+        <button class="col-sm-3"  id="root" type="button" onclick='myfunction(this.id)'> √  </button>
+        <button class="col-sm-3"  id="%" type="button" onclick='myfunction(this.id)'>        % </button>
+        <button class="col-sm-3"  id="power" type="button" onclick='myfunction(this.id)'>       X^n  </button>
       </div>
       <div class="row">
-        <button class="col-sm-3" id="7" type="button" >7</button>
-        <button class="col-sm-3" id="8" type="button" >8</button>
-        <button class="col-sm-3" id="9" type="button" >9</button>
-        <button class="col-sm-3" id="*" type="button" >x</button>
+        <button class="col-sm-3" id="7" type="button" onclick='myfunction(this.id)' >7</button>
+        <button class="col-sm-3" id="8" type="button" onclick='myfunction(this.id)' >8</button>
+        <button class="col-sm-3" id="9" type="button" onclick='myfunction(this.id)'>9</button>
+        <button class="col-sm-3" id="*" type="button" onclick='calculate(this.id)' >x</button>
       </div>
       <div class="row">
-        <button class="col-sm-3" id="4" type="button" >4</button>
-        <button class="col-sm-3" id="5" type="button" >5</button>
-        <button class="col-sm-3" id="6" type="button" >6</button>
-        <button class="col-sm-3" id="-" type="button" >-</button>
+        <button class="col-sm-3" id="4" type="button" onclick='myfunction(this.id)' >4</button>
+        <button class="col-sm-3" id="5" type="button" onclick='myfunction(this.id)' >5</button>
+        <button class="col-sm-3" id="6" type="button" onclick='myfunction(this.id)' >6</button>
+        <button class="col-sm-3" id="-" type="button" onclick='calculate(this.id)' >-</button>
       </div>
       <div class="row">
-        <button class="col-sm-3" id="1" type="button">1</button>
-        <button class="col-sm-3" id="2" type="button" >2</button>
-        <button class="col-sm-3" id="3" type="button" >3</button>
-        <button class="col-sm-3" id="+" type="button">+</button>
+        <button class="col-sm-3" id="1" type="button" onclick='myfunction(this.id)'>1</button>
+        <button class="col-sm-3" id="2" type="button"  onclick='myfunction(this.id)'>2</button>
+        <button class="col-sm-3" id="3" type="button" onclick='myfunction(this.id)' >3</button>
+        <button class="col-sm-3" id="+" type="button" onclick='calculate(this.id)'>+</button>
       </div>
       <div class="row"> 
-        <button class="col-sm-3" id="0" type="button" >0</button>
-        <button class="col-sm-3" id="." type="button" >.</button>
-        <button class="col-sm-3" id="equals" type="button" >=</button>
-        <button class="col-sm-3" id="blank" type="button" >x^n</button>
+        <button class="col-sm-3" id="0" type="button" onclick='myfunction(this.id)'>0</button>
+        <button class="col-sm-3" id="." type="button" onclick='myfunction(this.id)' >.</button>
+        <button class="col-sm-3" id="=" type="button" onclick='calculate(this.id)' >=</button>
+        <button class="col-sm-3" id="/" type="button" onclick='calculate(this.id)'>  ÷  </button>
       </div> 
     
       <footer style="color:white ">
