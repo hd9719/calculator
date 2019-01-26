@@ -9,95 +9,100 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <title>
-        welcome to my calculator....
-
+          CALCULATOR:
 </title>
 
 </head>
 
 
 <body>
-    <button class="tab" type="button" >Calculator</button>
-    <button class="tab" type="button"> History </button>
+        <button class="tab" type="button" onclick='navigate()' >Calculator</button>
+        <button class="tab" type="button" onclick="showHistory()"> History </button>
+ 
       
-<div id="container-fluid  text-center">
-        <div class="calcBG col-md-3 col-md-offset-4 text-center">
+<div id="container-fluid  ">
+
+      
+     <section id='calculator'>
+
+      
+            <div class="calcBG col-md-3 col-md-offset-4 text-center">
 
             
 
 <!-- for text area to input only from buttons-->  
-   <div id='text' class='textfield'>
+   
     
-   
-   <input type='text' id='t1' name="result" readonly  max="10" >
-   
-   </div>
+        <div id='text' class='textfield'>
 
-<!-- using bootstrap classes for same row sized button -->
+         <input type='text' id='t1' name="result" readonly  max="10" >
+   
+         </div>
+
+<!-- using bootstrap classes for same row sized button with onclick method to trigger event for an perticular button -->
 
 <div class="row">
-    <button class="col-sm-3"  id="clearall" type="button" onclick='clearscreenAll()'>AC </button>
-    <button class="col-sm-3"  id="clear" type="button"onclick='clearscreen()'>--></button>
-    <button class="col-sm-3"  id="square" type="button" onclick='singleInput(this.id)'>  x^2     </button>
-    <button class="col-sm-3"  id="cube" type="button" onclick='singleInput(this.id)'>  x^3  </button>
-  </div>
+        <button class="col-sm-3"  id="clearall" type="button" onclick='clearscreenAll()'>AC </button>
+         <button class="col-sm-3"  id="clear" type="button"onclick='clearscreen()'>--></button>
+         <button class="col-sm-3"  id="square" type="button" onclick='singleInput(this.id)'>  x^2     </button>
+         <button class="col-sm-3"  id="cube" type="button" onclick='singleInput(this.id)'>  x^3  </button>
+ </div>
  <div class="row">
         <button class="col-sm-3"  id="fact" type="button" onclick='singleInput(this.id)'>!</button>
         <button class="col-sm-3"  id="root" type="button" onclick='singleInput(this.id)'> √  </button>
-        <button class="col-sm-3"  id="%" type="button" onclick='singleInput(this.id)'>        % </button>
-        <button class="col-sm-3"  id="power" type="button" onclick='singleInput(this.id)'>       X^n  </button>
-      </div>
+        <button class="col-sm-3"  id="%" type="button" onclick='calculate(this.id)'>        % </button>
+        <button class="col-sm-3"  id="power" type="button" onclick='calculate(this.id)'>       X^n  </button>
+</div>
       <div class="row">
         <button class="col-sm-3" id="7" type="button" onclick='myfunction(this.id)' >7</button>
         <button class="col-sm-3" id="8" type="button" onclick='myfunction(this.id)' >8</button>
         <button class="col-sm-3" id="9" type="button" onclick='myfunction(this.id)'>9</button>
         <button class="col-sm-3" id="*" type="button" onclick='calculate(this.id)' >x</button>
-      </div>
-      <div class="row">
+</div>
+<div class="row">
         <button class="col-sm-3" id="4" type="button" onclick='myfunction(this.id)' >4</button>
         <button class="col-sm-3" id="5" type="button" onclick='myfunction(this.id)' >5</button>
         <button class="col-sm-3" id="6" type="button" onclick='myfunction(this.id)' >6</button>
         <button class="col-sm-3" id="-" type="button" onclick='calculate(this.id)' >-</button>
-      </div>
-      <div class="row">
+ </div>
+ <div class="row">
         <button class="col-sm-3" id="1" type="button" onclick='myfunction(this.id)'>1</button>
         <button class="col-sm-3" id="2" type="button"  onclick='myfunction(this.id)'>2</button>
         <button class="col-sm-3" id="3" type="button" onclick='myfunction(this.id)' >3</button>
         <button class="col-sm-3" id="+" type="button" onclick='calculate(this.id)'>+</button>
-      </div>
-      <div class="row"> 
+</div>
+ <div class="row"> 
         <button class="col-sm-3" id="0" type="button" onclick='myfunction(this.id)'>0</button>
         <button class="col-sm-3" id="." type="button" onclick='myfunction(this.id)' >.</button>
         <button class="col-sm-3" id="=" type="button" onclick='calculate(this.id)' > = </button>
         <button class="col-sm-3" id="/" type="button" onclick='calculate(this.id)'>  ÷  </button>
-      </div> 
-    
-      <footer style="color:white ">
+</div> 
+ 
+<!-- footer text to print -->
+<footer style="color:white ">
         
           MADE BY:HARSH PATEL
   
-    </footer>
-  </div>
+</footer>
+             </div>
+
+     </section>
+</div>
+ <!--new section for history table  -->
+<section id='history'>
+      <div id='History'class='content_history '>
+      
   
-  </div>
+       </div>
+</section>
 
 
+                    </body>
+
+          <script src=app.js>
 
 
-
-
-
-
-
-
-
-
-</body>
-
-<script src=app.js>
-
-
-</script>
+           </script>
 
 
 
