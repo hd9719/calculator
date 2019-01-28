@@ -18,13 +18,49 @@
   let number1=0,
            number2=0,
            number3=0;
-  let id1='+';
+  let id1='';
 
 
 
 //eventlistners
 
+//for taking input from keyboard
+//setting windows keydown event
+window.addEventListener("keydown", function (event)
+    {
 
+// Do nothing if the event was already processed        
+if (event.defaultPrevented) {
+               return; 
+    }
+              let id=event.key;
+              //console.log(id);
+//if keypressed = number then call myfunction              
+if(id=='1'|| id=='2' || id=='3' || id=='4' || id=='5' || id=='6' || id=='7' || id=='8' || id=='9' || id=='0' || id=='.')
+    {
+               myfunction(event.key);
+      
+    }
+
+else if(id=='+' || id=='-' || id=='*' || id=='/' )
+    {
+                calculate(id);
+    }
+
+else if(id=='Backspace')
+    {
+         clearscreen();
+    }
+      
+else if(id=='Enter')
+    {
+         calculate('=');
+    }
+
+    
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  }, true);
 
 
 
@@ -60,10 +96,10 @@ function myfunction(id) {
  function calculate(id)
     {
     
-    //         if(display.value==='0')
-    // {
-    //         return(alert("no input added"));
-    // }  
+            if(display.value==='0')
+    {
+            return(alert("no input added"));
+    }  
 
 
 
@@ -125,7 +161,8 @@ case '%':      number1=parseFloat(display.value,10);
                break;       
                       
     }
-
+              
+        
 
     }
    
@@ -224,13 +261,13 @@ else
 
 //to remove 1 char from last on screen
 function clearscreen()
-    {
+    { let value1=0;
 
                 //reading no from display
-               number1=display.value;
+               number2=display.value;
                 //token variable for length
                 let token=0;
-                token=number1.length;
+                token=number2.length;
  
  //if length=1 then display value=0               
 if(token == 1)
@@ -241,9 +278,9 @@ if(token == 1)
     }
 
               //to cut 1 no ferom total string and to display
-               number2=number1.substring(0,token-1);
+               value1=number2.substring(0,token-1);
 
-               display.value=number2;
+               display.value=value1;
     
     
 
@@ -258,6 +295,11 @@ function clearscreenAll()
 
  
                display.value='0';
+               id1='';
+               number1=0,
+               number2=0,
+               number3=0;
+               
      
     }
 
@@ -332,9 +374,9 @@ if(num==0)
       
 else
     {
-               for(let i=1;i<num;i++)
+               for(let i=num;i>0;i--)
                fact= fact*i;
-               console.log(fact);
+               //console.log(fact);
                return fact;
     }
    
@@ -361,6 +403,7 @@ if(expressions.length >= 10)
 
                 localStorage.setItem('expressions',JSON.stringify(expressions));
 
+               
 
 
     }
@@ -389,7 +432,7 @@ if(expressions.length >= 10)
                 localStorage.setItem('expressions',JSON.stringify(expressions));
 
 
-
+               
     }
 
 
