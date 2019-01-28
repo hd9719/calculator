@@ -9,17 +9,23 @@ Why use it?
 Its useful for simple calculations.
 
 Features
-           -Add
-          - Multiply
-           -Subtract
-           -Divide
-           -root
-           -square
-           -power
-           -qube
-           -factorial
-           -percent etc
-           -history:- calculator have last 10 transaction as an history.
+           -Having facility to take inputs from keyboad.
+           -History:- calculator have last 10 transaction as an history.  
+          
+           -Basic functionality:-
+           
+                        -Add
+                       - Multiply
+                       -Subtract
+                       -Divide
+                       -root
+                       -square
+                       -power
+                       -qube
+                       -factorial
+                       -percent etc
+            
+      --      
 Built With:-
               -love
              - html
@@ -28,7 +34,7 @@ Built With:-
 How to Run?
     To run my application you simply need to clone the project and run the html file.
 
-Screenshot
+limitation:-
+           no negative inputs are passed.
 
   
-<img src="https://C:\Users\HD'S\Desktop\assignments\assignment\images\Screenshot (14)" style=" width:100px ; height:100px " />
